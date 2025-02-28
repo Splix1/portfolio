@@ -1,24 +1,155 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
+@keyframes float {
+  from {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.8;
+    transform: translateY(-25vh) translateX(25px) rotate(90deg);
+  }
+  75% {
+    opacity: 0.8;
+    transform: translateY(-75vh) translateX(-25px) rotate(270deg);
+  }
+  to {
+    transform: translateY(-100vh) translateX(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(49, 16, 84, 0.2),
+                0 0 10px rgba(30, 27, 75, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(49, 16, 84, 0.4),
+                0 0 40px rgba(30, 27, 75, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(49, 16, 84, 0.2),
+                0 0 10px rgba(30, 27, 75, 0.2);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(49, 16, 84, 0.4),
+    rgba(30, 27, 75, 0.2)
+  );
+  animation: float var(--duration) linear infinite,
+             glow 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay);
+  pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Make content sections transparent */
+section {
+  background: transparent !important;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Adjust card backgrounds to be semi-transparent */
+.bg-gray-800 {
+  background-color: rgba(31, 41, 55, 0.7);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+/* Project card background */
+[class*="bg-[#1a1a1a]"] {
+  background-color: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+/* Interactive elements */
+a, button {
+  position: relative;
+  z-index: 20;
 }
