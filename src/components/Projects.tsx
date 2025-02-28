@@ -31,10 +31,15 @@ const projects: Project[] = [
       "React",
       "TypeScript",
       "Next.js",
+      "Tailwind CSS",
+      "Bluesky API",
+      "Reddit API",
+      "Vercel",
       "C#",
       "ASP.NET",
       "Redis",
       "Supabase",
+      "Docker"
     ],
     links: {
       github: "https://github.com/Splix1/noDoom",

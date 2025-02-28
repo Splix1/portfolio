@@ -13,6 +13,7 @@ const skills = {
   frontend: [
     "React",
     "Next.js",
+    "Tailwind CSS",
     "React Native",
     "HTML/CSS",
     "Redux",
