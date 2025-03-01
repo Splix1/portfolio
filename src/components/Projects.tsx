@@ -43,7 +43,8 @@ const projects: Project[] = [
     ],
     links: {
       github: "https://github.com/Splix1/noDoom",
-      live: "https://no-doom.com",
+      live: "",
+      // live: "https://no-doom.com",
     },
     image: "/projects/nodoom.png",
   },
