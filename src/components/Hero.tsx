@@ -43,7 +43,8 @@ export default function Hero() {
           </a>
           <span className="text-gray-600">|</span>
           <a 
-            href="/resume.pdf" 
+            href="/resume.pdf"
+            target="_blank"
             className="hover:text-white transition-colors flex items-center gap-2 group"
           >
             <FiFileText className="w-5 h-5 group-hover:scale-110 transition-transform" />
