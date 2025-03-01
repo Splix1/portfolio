@@ -24,7 +24,6 @@ export default function Hero() {
           className="space-y-2"
         >
           <h2 className="text-2xl text-gray-200">Software Engineer</h2>
-          <h2 className="text-2xl text-gray-200">QA Engineer</h2>
         </motion.div>
 
         <motion.div
