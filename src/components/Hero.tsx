@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiFileText } from "react-icons/fi";
-
+import Link from "next/link";
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center relative">
@@ -73,6 +73,7 @@ export default function Hero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
+          <Link href="#about">
           <svg 
             className="w-6 h-6 text-gray-400"
             fill="none"
@@ -82,6 +83,7 @@ export default function Hero() {
           >
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
+          </Link>
         </motion.div>
       </motion.div>
     </section>
