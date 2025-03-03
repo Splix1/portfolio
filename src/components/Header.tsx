@@ -20,7 +20,7 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm"
     >
       <div className="container mx-auto px-4 py-4">
-        <nav className="flex items-center justify-between">
+        <nav className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -32,7 +32,7 @@ export default function Header() {
             </Link>
           </motion.div>
 
-          <ul className="flex space-x-8">
+          <ul className="flex flex-wrap justify-center space-x-4 sm:space-x-8">
             {navItems.map((item) => (
               <motion.li
                 key={item.name}

@@ -51,12 +51,13 @@ export default function About() {
         >
           <h2 className="text-3xl font-bold mb-8 font-mono">Hi there!</h2>
           
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
               viewport={{ once: true }}
+              className="px-4 md:px-0"
             >
               <p className="text-gray-400 leading-relaxed mb-6">
                 I&apos;m Austin, a software engineer, previously software engineer at Criterium Engineers, software engineer mentor at Fullstack Academy, and former freelance fullstack developer.
@@ -78,7 +79,7 @@ export default function About() {
             >
               <h3 className="text-xl font-semibold mb-6 text-gray-300">Skills</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-4 px-4 md:px-0">
                 <div>
                   <h4 className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wider">Languages</h4>
                   <div className="flex flex-wrap gap-2">

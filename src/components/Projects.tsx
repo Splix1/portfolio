@@ -118,10 +118,10 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="grid md:grid-cols-2 gap-8 items-start"
+                className="grid md:grid-cols-2 gap-8 items-start p-4"
               >
                 <div className="bg-[#1a1a1a] rounded-lg overflow-hidden">
-                  <div className="relative w-full h-[300px]">
+                  <div className="relative w-full h-[200px] sm:h-[300px]">
                     <Image
                       src={project.image}
                       alt={`${project.title} Preview`}
@@ -163,7 +163,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-4">
                     <a
                       href={project.links.github}
                       target="_blank"

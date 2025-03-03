@@ -11,7 +11,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl md:text-7xl font-light tracking-wide"
+          className="text-4xl md:text-6xl lg:text-7xl font-light tracking-wide px-4"
         >
           <span className="font-normal">Austin</span>{" "}
           <span className="text-gray-400">Gautney</span>
@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="pt-4 flex items-center justify-center space-x-6 text-gray-400"
+          className="pt-4 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 text-gray-400"
         >
           <a 
             href="https://github.com/Splix1" 
