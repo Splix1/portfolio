@@ -40,7 +40,7 @@ const skills = {
 
 export default function About() {
   return (
-    <section id="about" className="relative py-20 min-h-screen flex items-center backdrop-blur-sm">
+    <section id="about" className="relative py-20 min-h-screen flex items-center backdrop-blur-sm pt-32">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
